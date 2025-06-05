@@ -20,185 +20,219 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:weight@800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Russo+One&display=swap');
         .scrolled #navbar-inner {
-            background-color: white;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-            color: black;
-        }
-        .custom-poppins {
-            font-family: 'Poppins', sans-serif;
-            font-weight: 800;
-        }
-        .font-manrope {
-            font-family: 'Manrope', sans-serif;
-        }
-        .dark .scrolled #navbar-inner {
-            background-color: #1f2937;
-            color: white;
-        }
-        .scrollbar-thin::-webkit-scrollbar {
-            height: 6px;
-        }
-        .scrollbar-thin::-webkit-scrollbar-thumb {
-            background: #888;
-            border-radius: 4px;
-        }
-        .scrollbar-thin::-webkit-scrollbar-thumb:hover {
-            background: #555;
-        }
-        .bg-red-600:hover {
-            background-color: #c53030;
-        }
-        @keyframes marquee {
-            0% {
-                transform: translateX(100%);
-            }
-            100% {
-                transform: translateX(-100%);
-            }
-        }
-        .animate-marquee {
-            animation: marquee 15s linear infinite;
-        }
-        .animate-spin-slow {
-            animation: spin 4s linear infinite;
-        }
-        .swiper-pagination-bullet {
-            background: #ccc;
-            opacity: 1;
-            width: 10px;
-            height: 10px;
-            margin: 0 4px;
-            border-radius: 9999px;
-            transition: all 0.3s ease;
-        }
-        .swiper-pagination-bullet-active {
-            background: #facc15;
-            width: 30px;
-            border-radius: 9999px;
-        }
-        .swiper-button-prev,
-        .swiper-button-next {
-            top: 50% !important;
-            transform: translateY(-50%);
-            width: 30px;
-            height: 30px;
-            background: rgba(0, 0, 0, 0.5);
-            border-radius: 50%;
-            color: white;
-            z-index: 10;
-        }
-        .swiper-button-prev::after,
-        .swiper-button-next::after {
-            font-size: 16px;
-            color: white;
-        }
-        ::-webkit-scrollbar {
-            width: 1px;
-            background-color: transparent;
-            height: 1px;
-        }
-        ::-webkit-scrollbar-thumb {
-            background-color: #4B5563;
-            border-radius: 4px;
-        }
-        .custom-scroll::-webkit-scrollbar {
-            height: 1px;
-            width: 1px;
-        }
-        .custom-scroll::-webkit-scrollbar-track {
-            background: transparent;
-        }
-        .custom-scroll::-webkit-scrollbar-thumb {
-            background-color: #4B5563;
-            border-radius: 4px;
-        }
-        .agenda-carousel {
-            overflow-x: auto;
-            scroll-behavior: smooth;
-            scroll-snap-type: x mandatory;
-            padding-bottom: 10px;
-        }
-        .agenda-track {
-            display: flex;
-            gap: 16px;
-            width: max-content;
-        }
-        .agenda-card {
-            background-color: #1e1e2f;
-            color: #fff;
-            width: 220px;
-            border-radius: 10px;
-            overflow: hidden;
-            scroll-snap-align: start;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-            flex-shrink: 0;
-            display: flex;
-            flex-direction: column;
-            transition: transform 0.2s ease;
-        }
-        .agenda-card:hover {
-            transform: scale(1.03);
-        }
-        .agenda-image {
-            width: 100%;
-            height: 120px;
-            object-fit: cover;
-        }
-        .agenda-content {
-            padding: 12px;
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
-        }
-        .agenda-category {
-            color: #f0c000;
-            font-size: 0.75rem;
-            font-weight: bold;
-        }
-        .agenda-title {
-            font-size: 0.9rem;
-            font-weight: bold;
-            line-height: 1.2rem;
-        }
-        .agenda-desc {
-            font-size: 0.75rem;
-            color: #ccc;
-        }
-        .agenda-info {
-            font-size: 0.7rem;
-            display: flex;
-            justify-content: space-between;
-            color: #aaa;
-            margin-top: 3px;
-        }
-        .agenda-footer {
-            margin-top: auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 10px;
-        }
-        .agenda-price {
-            font-weight: bold;
-            font-size: 0.85rem;
-            color: #fbc02d;
-        }
-        .agenda-price.free {
-            color: #00e676;
-        }
-        .agenda-button {
-            background-color: #8e44ff;
-            color: #fff;
-            border: none;
-            padding: 4px 10px;
-            border-radius: 6px;
-            font-size: 0.75rem;
-            cursor: pointer;
-        }
-    </style>
+    background-color: white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    color: black;
+}
+
+.custom-poppins {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+}
+
+.font-manrope {
+    font-family: 'Manrope', sans-serif;
+}
+
+.dark .scrolled #navbar-inner {
+    background-color: #1f2937;
+    color: white;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+    height: 6px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.bg-red-600:hover {
+    background-color: #c53030;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.animate-marquee {
+    animation: marquee 15s linear infinite;
+}
+
+.animate-spin-slow {
+    animation: spin 4s linear infinite;
+}
+
+.swiper-pagination-bullet {
+    background: #ccc;
+    opacity: 1;
+    width: 10px;
+    height: 10px;
+    margin: 0 4px;
+    border-radius: 9999px;
+    transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+    background: #facc15;
+    width: 30px;
+    border-radius: 9999px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    top: 50% !important;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    color: white;
+    z-index: 10;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    font-size: 16px;
+    color: white;
+}
+
+ ::-webkit-scrollbar {
+    width: 1px;
+    background-color: transparent;
+    height: 1px;
+}
+
+ ::-webkit-scrollbar-thumb {
+    background-color: #4B5563;
+    border-radius: 4px;
+}
+
+.custom-scroll::-webkit-scrollbar {
+    height: 1px;
+    width: 1px;
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+    background-color: #4B5563;
+    border-radius: 4px;
+}
+
+.agenda-carousel {
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 10px;
+}
+
+.agenda-track {
+    display: flex;
+    gap: 16px;
+    width: max-content;
+}
+
+.agenda-card {
+    background-color: #1e1e2f;
+    color: #fff;
+    width: 220px;
+    border-radius: 10px;
+    overflow: hidden;
+    scroll-snap-align: start;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease;
+}
+
+.agenda-card:hover {
+    transform: scale(1.03);
+}
+
+.agenda-image {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
+
+.agenda-content {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.agenda-category {
+    color: #f0c000;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.agenda-title {
+    font-size: 0.9rem;
+    font-weight: bold;
+    line-height: 1.2rem;
+}
+
+.agenda-desc {
+    font-size: 0.75rem;
+    color: #ccc;
+}
+
+.agenda-info {
+    font-size: 0.7rem;
+    display: flex;
+    justify-content: space-between;
+    color: #aaa;
+    margin-top: 3px;
+}
+
+.agenda-footer {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.agenda-price {
+    font-weight: bold;
+    font-size: 0.85rem;
+    color: #fbc02d;
+}
+
+.agenda-price.free {
+    color: #00e676;
+}
+
+.agenda-button {
+    background-color: #8e44ff;
+    color: #fff;
+    border: none;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    cursor: pointer;
+}
+</style>
 </head>
 <body class="bg-gray-100 text-black dark:bg-gray-900 dark:text-white">
     <nav id="navbar"
@@ -510,6 +544,24 @@
             <div class="swiper myVideoSwiper relative pb-10">
                 <div class="swiper-wrapper">
                     <!-- Slides -->
+                    <div class="swiper-slide w-72">
+                        <div class="rounded-xl overflow-hidden shadow-md bg-black aspect-video">
+                            <iframe class="w-full h-full" src="https://www.youtube.com/embed/pKhBFiUSZzY"
+                                frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="mt-2 text-black dark:text-white text-sm font-semibold">Setiap Bahasa Pemrograman
+                            Gunakan Ini!</div>
+                        <div class="text-gray-400 text-xs">Deskripsi singkat video di sini</div>
+                    </div>
+                    <div class="swiper-slide w-72">
+                        <div class="rounded-xl overflow-hidden shadow-md bg-black aspect-video">
+                            <iframe class="w-full h-full" src="https://www.youtube.com/embed/pKhBFiUSZzY"
+                                frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="mt-2 text-black dark:text-white text-sm font-semibold">Setiap Bahasa Pemrograman
+                            Gunakan Ini!</div>
+                        <div class="text-gray-400 text-xs">Deskripsi singkat video di sini</div>
+                    </div>
                     <div class="swiper-slide w-72">
                         <div class="rounded-xl overflow-hidden shadow-md bg-black aspect-video">
                             <iframe class="w-full h-full" src="https://www.youtube.com/embed/pKhBFiUSZzY"
@@ -1412,125 +1464,127 @@
     </footer>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const html = document.documentElement;
-            const themeDropdown = document.getElementById("themeDropdown");
-            const toggleDark = document.getElementById("toggleDark");
-            function setThemeIcon(iconName) {
-                const oldIcon = document.getElementById("themeIcon");
-                if (oldIcon) {
-                    oldIcon.setAttribute("data-lucide", iconName);
-                    lucide.createIcons();
-                }
-            }
-            function setTheme(mode) {
-                if (mode === 'dark') {
-                    html.classList.add('dark');
-                    localStorage.theme = 'dark';
-                    setThemeIcon('moon');
-                } else if (mode === 'light') {
-                    html.classList.remove('dark');
-                    localStorage.theme = 'light';
-                    setThemeIcon('sun');
-                } else {
-                    localStorage.removeItem('theme');
-                    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                        html.classList.add('dark');
-                    } else {
-                        html.classList.remove('dark');
-                    }
-                    setThemeIcon('monitor');
-                }
-                themeDropdown.classList.add('hidden');
-            }
-            toggleDark.addEventListener('click', (e) => {
-                e.stopPropagation();
-                themeDropdown.classList.toggle("hidden");
-            });
-            window.addEventListener('click', (e) => {
-                if (!themeDropdown.contains(e.target) && !toggleDark.contains(e.target)) {
-                    themeDropdown.classList.add('hidden');
-                }
-            });
-            window.addEventListener('scroll', () => {
-                themeDropdown.classList.add('hidden');
-                const navbar = document.getElementById('navbar');
-                const navbarInner = document.getElementById('navbar-inner');
-                const userDropdown = document.getElementById('userDropdown');
-                const isDarkMode = html.classList.contains('dark');
-                if (navbar && navbarInner) {
-                    if (window.scrollY > 50) {
-                        navbar.classList.add('scrolled');
-                        navbarInner.classList.add(isDarkMode ? 'bg-gray-800' : 'bg-white');
-                        navbarInner.classList.remove(isDarkMode ? 'bg-white' : 'bg-gray-800');
-                    } else {
-                        navbar.classList.remove('scrolled');
-                        navbarInner.classList.remove('bg-gray-800', 'bg-white');
-                    }
-                }
-                if (userDropdown && !userDropdown.classList.contains("hidden")) {
-                    userDropdown.classList.add("hidden");
-                }
-            });
-            const storedTheme = localStorage.theme;
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            if (storedTheme === 'dark') {
-                html.classList.add('dark');
-                setThemeIcon('moon');
-            } else if (storedTheme === 'light') {
-                html.classList.remove('dark');
-                setThemeIcon('sun');
-            } else {
-                if (prefersDark) {
-                    html.classList.add('dark');
-                } else {
-                    html.classList.remove('dark');
-                }
-                setThemeIcon('monitor');
-            }
+    const html = document.documentElement;
+    const themeDropdown = document.getElementById("themeDropdown");
+    const toggleDark = document.getElementById("toggleDark");
+
+    function setThemeIcon(iconName) {
+        const oldIcon = document.getElementById("themeIcon");
+        if (oldIcon) {
+            oldIcon.setAttribute("data-lucide", iconName);
             lucide.createIcons();
-            window.setTheme = setTheme;
-            // Tambahkan ini biar toggle profil jalan
-            window.toggleMenu = function() {
-                const userDropdown = document.getElementById("userDropdown");
-                if (userDropdown) {
-                    userDropdown.classList.toggle("hidden");
-                }
-            };
-        });
-        const swiper = new Swiper(".myVideoSwiper", {
-            slidesPerView: 1,
-            spaceBetween: 20,
-            loop: true,
-            autoplay: {
-                delay: 4000,
-                disableOnInteraction: false
-            },
-            breakpoints: {
-                640: {
-                    slidesPerView: 2
-                },
-                768: {
-                    slidesPerView: 3
-                },
-                1024: {
-                    slidesPerView: 4
-                },
-                1280: {
-                    slidesPerView: 5
-                },
-                1536: {
-                    slidesPerView: 6
-                }
-            },
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev"
+        }
+    }
+
+    function setTheme(mode) {
+        if (mode === 'dark') {
+            html.classList.add('dark');
+            localStorage.theme = 'dark';
+            setThemeIcon('moon');
+        } else if (mode === 'light') {
+            html.classList.remove('dark');
+            localStorage.theme = 'light';
+            setThemeIcon('sun');
+        } else {
+            localStorage.removeItem('theme');
+            if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                html.classList.add('dark');
+            } else {
+                html.classList.remove('dark');
             }
-        });
+            setThemeIcon('monitor');
+        }
+        themeDropdown.classList.add('hidden');
+    }
+    toggleDark.addEventListener('click', (e) => {
+        e.stopPropagation();
+        themeDropdown.classList.toggle("hidden");
+    });
+    window.addEventListener('click', (e) => {
+        if (!themeDropdown.contains(e.target) && !toggleDark.contains(e.target)) {
+            themeDropdown.classList.add('hidden');
+        }
+    });
+    window.addEventListener('scroll', () => {
+        themeDropdown.classList.add('hidden');
+        const navbar = document.getElementById('navbar');
+        const navbarInner = document.getElementById('navbar-inner');
+        const userDropdown = document.getElementById('userDropdown');
+        const isDarkMode = html.classList.contains('dark');
+        if (navbar && navbarInner) {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+                navbarInner.classList.add(isDarkMode ? 'bg-gray-800' : 'bg-white');
+                navbarInner.classList.remove(isDarkMode ? 'bg-white' : 'bg-gray-800');
+            } else {
+                navbar.classList.remove('scrolled');
+                navbarInner.classList.remove('bg-gray-800', 'bg-white');
+            }
+        }
+        if (userDropdown && !userDropdown.classList.contains("hidden")) {
+            userDropdown.classList.add("hidden");
+        }
+    });
+    const storedTheme = localStorage.theme;
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (storedTheme === 'dark') {
+        html.classList.add('dark');
+        setThemeIcon('moon');
+    } else if (storedTheme === 'light') {
+        html.classList.remove('dark');
+        setThemeIcon('sun');
+    } else {
+        if (prefersDark) {
+            html.classList.add('dark');
+        } else {
+            html.classList.remove('dark');
+        }
+        setThemeIcon('monitor');
+    }
+    lucide.createIcons();
+    window.setTheme = setTheme;
+    // Tambahkan ini biar toggle profil jalan
+    window.toggleMenu = function() {
+        const userDropdown = document.getElementById("userDropdown");
+        if (userDropdown) {
+            userDropdown.classList.toggle("hidden");
+        }
+    };
+});
+const swiper = new Swiper(".myVideoSwiper", {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: true,
+    autoplay: {
+        delay: 4000,
+        disableOnInteraction: false
+    },
+    breakpoints: {
+        640: {
+            slidesPerView: 2
+        },
+        768: {
+            slidesPerView: 3
+        },
+        1024: {
+            slidesPerView: 4
+        },
+        1280: {
+            slidesPerView: 5
+        },
+        1536: {
+            slidesPerView: 6
+        }
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+    }
+});
     </script>
 </body>
 </html>
